@@ -1,1 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f4f3;
+  background-image: img/backs2.jpg;
+}
+
+.login-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.login_header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding-left: 15px;
+  font-family: var(--mc-default--fontlist);
+  text-decoration: underline;
+}
+
+
+.login_header img {
+  width: 200px;
+}
+
+.login_header h1 {
+  color: black;
+  font-size: 1.5em;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+}
+
+.login_input {
+  border: 2px solid #8aba5a;
+  border-radius: 20px;
+  padding: 5px;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 1em;
+  max-width: 300px;
+  outline: none;
+  width: 100%;
+}
+
+.login_button {
+  background-color: #34C924;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Minecraft', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.login_button:hover {
+  text-decoration: underline;
+  color: #00f00;
+}
+
+.login_button:disabled {
+  background-color: whitesmoke;
+  color: rgba(128, 128, 128, 0.705);
+  cursor: auto;
+}
+
+
+.login_inputimg{
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  cursor: pointer;  
+  border : none;
+}
+
+#ft-one{
+  width: 30px;
+  outline: none;
+  cursor:pointer;
+  text-align:center;
+}
+#ft-two{
+  width: 30px;
+  outline: none;
+  cursor:pointer;
+  text-align:center;
+}
+
+img{
+  max-width: 100px;
+  max-height: 100px;
+}
+
+
 
