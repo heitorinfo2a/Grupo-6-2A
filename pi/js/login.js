@@ -1,0 +1,94 @@
+const inputUm = document.querySelector('.login_input.um');
+const inputDois = document.querySelector('.login_input.dois');
+const button = document.querySelector('.login_button');
+const form = document.querySelector('.login-form');
+
+let formCompleto = false;
+
+const validação = () =>{
+    if (inputUm.value.length > 2  &&  inputDois.value.length > 2) {
+        button.removeAttribute('disabled');
+        formCompleto = true;
+    } else{
+
+        button.setAttribute('disabled', '');
+        formCompleto = false;
+};
+};
+
+const pedirformulario = (event) => {
+    event.preventDefault();
+if (inputUm.value.length > 2  &&  inputDois.value.length > 2) {
+    localStorage.setItem('player-um', inputUm.value);
+    localStorage.setItem('player-dois', inputDois.value);
+    window.location = 'pagina/game.html';
+};
+}
+
+inputUm.addEventListener ('input', validação);
+inputDois.addEventListener ('input', validação);
+form.addEventListener ('submit', pedirformulario);
+
+document.getElementById('ft-one').addEventListener('click', () => {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*';
+  input.name = 'fotoum';
+  input.style.display = 'none';
+  document.body.appendChild(input);
+  input.addEventListener('change', (event) => {
+    const foto = event.target.files[0];
+    if (foto) {
+      const ler = new FileReader();
+      ler.onload = function (e) {
+        const img = document.getElementById('preview1');
+        img.src = e.target.result;
+        img.style.display = 'block';
+        localStorage.setItem('imgum', img.src);
+        document.body.removeChild(input); 
+      };
+      ler.onerror = function () {
+        alert('nao foi possivel ler a imagem. Tente de novo');
+        document.body.removeChild(input); 
+      };
+      ler.readAsDataURL(foto);
+    } else {
+      alert('imagem nao selecionada');
+      document.body.removeChild(input); 
+    }
+  });
+
+  input.click();
+});
+
+document.getElementById('ft-two').addEventListener('click', () => {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*';
+  input.name = 'fotodois';
+  input.style.display = 'none';
+  document.body.appendChild(input);
+  input.addEventListener('change', (event) => {
+    const foto = event.target.files[0];
+    if (foto) {
+      const ler = new FileReader();
+      ler.onload = function (e) {
+        const img = document.getElementById('preview2');
+        img.src = e.target.result;
+        img.style.display = 'block';
+        localStorage.setItem('imgdois', img.src);
+        document.body.removeChild(input); 
+      };
+      ler.onerror = function () {
+        alert('nao foi possivel ler a imagem. Tente de novo');
+        document.body.removeChild(input); 
+      };
+      ler.readAsDataURL(foto);
+    } else {
+      alert('imagem nao selecionada');
+      document.body.removeChild(input); 
+    }
+  });
+  // Abre a caixa de seleção de fotos APENAS DEPOIS de adicionar o input ao DOM
+  input.click();
+});
