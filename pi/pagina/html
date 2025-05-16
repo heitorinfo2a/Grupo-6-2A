@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memoria</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/game.css">
+    <link rel="shortcut icon" href="img/favicon (1).ico" type="imagen/x-icon">
+    <script defer src="../js/game.js"></script>
 
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+</head>
+<body>
+    <div class="jogador um"  style="font-size: 25px; font-family: Lucida Sans;">
+        <div id="playerInfo">
+            <p id="nome">Nome:</p>
+            <div id="jogadorUm"></div>
+            
+        </div>
+        <div id="pontosInfo">
+            pontos:
+            <div class="ponto Um">00</div>
+        </div>    
+    </div>
+    <div class="jogadordavez"></div>
+    <div class="mesa">
+        
+        <div class="baralho"></div>
+        <div class="grid"> </div>
+        
+    </div> 
+    
+    <div class="jogador dois"  style="font-size: 25px; font-family: Lucida Sans;">
+        <div id="playerInfo">
+            <p id="nome"> Nome: </p>
+            <div id="jogadorDois" ></div>
+        </div>
+
+        <div id="pontosInfo">
+            pontos:
+            <div class="ponto Dois">00</div>
+        </div>
+        
+</body>
+</html> 
