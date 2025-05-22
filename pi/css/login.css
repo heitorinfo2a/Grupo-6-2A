@@ -5,16 +5,39 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background-color: #f7f4f3;
-  background-image: img/backs2.jpg;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #5fa8e6 0%, #2986cc 50%, #1565c0 100%);
+  background-image: url(/img//fundo\ do\ mario.jpg);
+}
 .login-form {
   align-items: center;
   display: flex;
+  width: 390px;
   flex-direction: column;
-  height: 100vh;
   justify-content: center;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 15px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .login_header {
@@ -22,74 +45,94 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 40px;
-  padding-left: 15px;
   font-family: var(--mc-default--fontlist);
-  text-decoration: underline;
 }
 
 
 .login_header img {
   width: 200px;
 }
-
-.login_header h1 {
-  color: black;
-  font-size: 1.5em;
+.login_header img:hover {
+  transform: scale(1.3);
+  transition: all 0.3s ease;
 }
 
-.input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: none;
+.login_header h1 {
+  margin-top: 10px;
+  color: white;
+  font-size: 1.5em;
+  background: transparent;
+
+}
+.login_header h1:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 .login_input {
-  border: 2px solid #8aba5a;
-  border-radius: 20px;
-  padding: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius:35px;
+  padding: 10px 20px;
   margin-bottom: 10px;
-  color: #000;
+  color: #fff;
   font-size: 1em;
   max-width: 300px;
   outline: none;
   width: 100%;
+  background: transparent;
 }
 
 .login_button {
-  background-color: #34C924;
   border: none;
   color: white;
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 30px;
   padding: 15px 32px;
+  margin: 20px 0;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  font-family: 'Minecraft', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
 
 }
 
 .login_button:hover {
-  text-decoration: underline;
-  color: #00f00;
+  color: #333;
 }
 
 .login_button:disabled {
-  background-color: whitesmoke;
-  color: rgba(128, 128, 128, 0.705);
+  background-color: #ffffff;
+  color: rgb(102, 102, 102);
   cursor: auto;
+}
+.login_button:disabled:hover {
+  background-color: #ffffff;
+  color: rgb(102, 102, 102);
+  cursor: auto;
+  transform: scale(0.95);
+}
+.login_button:enabled {
+  background: linear-gradient(135deg, #5fa8e6 0%, #2986cc 50%);
+  color: white;
+  transform: scale(1);
+  transition: all 0.3s ease;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.login_button:enabled:hover {
+  background: linear-gradient(135deg, #5fa8e6 0%, #2986cc 50%, #1565c0 100%);
+  color: white;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 
-.login_inputimg{
+.login_input img{
   padding: 10px 20px;
   border-radius: 5px;
-  color: white;
+  background: rgba(255, 255, 255, 0.1);
   text-align: center;
   cursor: pointer;  
   border : none;
@@ -100,17 +143,56 @@
   outline: none;
   cursor:pointer;
   text-align:center;
+  background: transparent;
+  color: #fff;
 }
 #ft-two{
   width: 30px;
   outline: none;
   cursor:pointer;
   text-align:center;
+  background: transparent;
+  color: #fff;
 }
 
 img{
   max-width: 100px;
   max-height: 100px;
 }
+.input-placeholder {
+  position: relative;
+  width: 100%;
+  color: #fff;
+}
 
-
+.input-placeholder i {
+  position: absolute;
+  font-size: 20px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.login_input {
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.login_input::placeholder {
+  color: #ccc;
+  font-size: 15px;
+  background: transparent;
+}
+.login_input.um:focus,
+.login_input.dois:focus {
+  transform: scale(1.07);
+  transition: transform 0.2s;
+  z-index: 1;
+}
+.login_input.um:hover,
+.login_input.dois:hover {
+  transform: scale(1.07);
+  transition: transform 0.2s;
+  z-index: 1;
+}
