@@ -304,6 +304,13 @@
 
     }
 
+    #bx{
+     
+      background-color: #6C63FF;
+      border-radius : 50%;
+
+    }
+
     #inc{
 
         transform:  translateY(1px) rotate(-130deg);        
