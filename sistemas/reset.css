@@ -1,0 +1,50 @@
+/* Reset geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove estilos de lista */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove decoração de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Herda a fonte base */
+body, input, textarea, button {
+  font-family: inherit;
+  font-size: 100%;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* HTML5 elementos block (garantir compatibilidade antiga) */
+article, aside, footer, header, nav, section, main {
+  display: block;
+}
+
+/* Remove borda de imagens e ajusta tamanho */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Ajusta botão */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Evita zoom em inputs no iOS */
+input, button, select, textarea {
+  font-size: 16px;
+}

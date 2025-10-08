@@ -1,0 +1,12 @@
+header{
+
+    display: flex;
+
+}
+
+.navheader{
+
+    display: flex;
+    justify-content: space-around;
+
+}
